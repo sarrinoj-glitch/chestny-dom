@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Честный дом — крыша комплектом, Казань (демо)</title>
+<meta name="description" content="Демо интернет-магазина: соберите комплект кровли под свой дом и получите смету до последнего самореза.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E5B45'/%3E%3Cpath d='M6 17 16 8l10 9' fill='none' stroke='%23FFD84A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 17v7h12v-7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F1F3F4;      /* оцинкованный лист */
+  --card: #FFFFFF;
+  --ink: #17202B;
+  --muted: #5B6672;
+  --line: #D5DBE0;
+  --green: #0E5B45;      /* RAL 6005, «зелёный мох» */
+  --green-d: #0A4635;
+  --marker: #FFD84A;     /* маркер, которым обводят итог в смете */
+  --roof: #45322E;
+  --display: 'Unbounded', 'Golos Text', system-ui, sans-serif;
+  --text: 'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1220px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 2.9vw, 2.3rem); max-width: 20ch; }
+.lede { color: var(--muted); max-width: 58ch; margin-top: 14px; }
+.sec { padding: 96px 0; }
+.sec-head { margin-bottom: 40px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* демо-плашка */
+.demo { background: var(--ink); color: #C9D2DA; font-size: 0.84rem; text-align: center; padding: 9px 16px; }
+.demo strong { color: var(--marker); font-weight: 600; }
+
+/* шапка */
+.top { position: sticky; top: 0; z-index: 20; background: rgba(241,243,244,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top-in { display: flex; align-items: center; gap: 28px; height: 68px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 1.02rem; letter-spacing: -0.02em; white-space: nowrap; }
+.logo svg { width: 30px; height: 30px; }
+.nav { display: flex; gap: 4px; margin-right: auto; }
+.nav a { text-decoration: none; font-size: 0.94rem; padding: 8px 12px; border-radius: 8px; color: var(--muted); }
+.nav a:hover { color: var(--ink); background: rgba(23,32,43,0.06); }
+.top-phone { text-decoration: none; font-weight: 600; white-space: nowrap; }
+.cart-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; border: 0; border-radius: 10px; padding: 10px 16px; font-weight: 500; white-space: nowrap; }
+.cart-btn b { background: var(--marker); color: var(--ink); border-radius: 999px; min-width: 22px; height: 22px; display: inline-grid; place-items: center; font-size: 0.8rem; padding: 0 6px; }
+
+/* кнопки */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 12px; padding: 15px 22px; font-weight: 600; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+.btn-main { background: var(--green); color: #fff; }
+.btn-main:hover { background: var(--green-d); }
+.btn-line { background: transparent; border: 1.5px solid var(--ink); }
+.btn-line:hover { background: var(--ink); color: #fff; }
+.btn:active { transform: translateY(1px); }
+
+/* первый экран */
+.hero { padding: 56px 0 72px; }
+.hero h1 { font-size: clamp(1.75rem, 4.4vw, 3.5rem); max-width: 22ch; }
+.hero h1 span { background: linear-gradient(transparent 62%, var(--marker) 62%, var(--marker) 92%, transparent 92%); }
+.hero .lede { font-size: 1.1rem; }
+.bench { margin-top: 40px; display: grid; grid-template-columns: 300px minmax(0, 1fr) 390px; gap: 22px; align-items: stretch; }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+.ctl + .ctl { margin-top: 22px; }
+.ctl-name { display: flex; justify-content: space-between; font-size: 0.88rem; color: var(--muted); margin-bottom: 9px; }
+.ctl-name output { color: var(--ink); font-weight: 600; }
+.seg { display: grid; gap: 6px; }
+.seg.two { grid-template-columns: 1fr 1fr; }
+.seg button { border: 1.5px solid var(--line); background: #fff; border-radius: 10px; padding: 10px 12px; text-align: left; font-size: 0.94rem; line-height: 1.3; transition: border-color .15s ease, background .15s ease; }
+.seg button small { display: block; color: var(--muted); font-size: 0.8rem; }
+.seg button:hover { border-color: #9AA5AF; }
+.seg button[aria-pressed="true"] { border-color: var(--green); background: #EAF3EF; }
+input[type=range] { width: 100%; accent-color: var(--green); height: 28px; }
+.sw { display: flex; gap: 7px; flex-wrap: wrap; }
+.sw button { width: 36px; height: 36px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 0 0 1.5px var(--line); background: var(--c); }
+.sw button[aria-pressed="true"] { box-shadow: 0 0 0 2.5px var(--green); }
+.check { display: flex; align-items: center; gap: 10px; font-size: 0.94rem; }
+.check + .check { margin-top: 8px; }
+.check input { width: 20px; height: 20px; accent-color: var(--green); }
+
+.view { display: flex; flex-direction: column; }
+.stage { position: relative; flex: 1; min-height: 300px; border-radius: 18px; overflow: hidden; background: linear-gradient(#DCE7EE, #EEF2F4); border: 1px solid var(--line); }
+.stage svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.stage-cap { position: absolute; z-index: 1; left: 14px; bottom: 14px; background: rgba(255,255,255,0.86); border-radius: 8px; padding: 6px 11px; font-size: 0.86rem; }
+.roof-c { fill: var(--roof); transition: fill .35s ease; }
+.roof-e { stroke: color-mix(in srgb, var(--roof) 72%, #000); transition: stroke .35s ease; }
+.opts { margin-top: 12px; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.opts .ctl + .ctl { margin-top: 0; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+.fact { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+.fact b { display: block; font-family: var(--display); font-size: 1.25rem; letter-spacing: -0.02em; }
+.fact span { font-size: 0.84rem; color: var(--muted); }
+
+/* смета — лист с отрывным краем */
+.bill { background: #fff; padding: 24px 22px 30px; position: relative; --t: 9px;
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% calc(100% - var(--t)) no-repeat, radial-gradient(circle at 50% 0, #000 6.5px, transparent 7px) bottom left / 18px var(--t) repeat-x;
+  mask: linear-gradient(#000 0 0) top / 100% calc(100% - var(--t)) no-repeat, radial-gradient(circle at 50% 0, #000 6.5px, transparent 7px) bottom left / 18px var(--t) repeat-x; }
+.bill-wrap { filter: drop-shadow(0 14px 22px rgba(23,32,43,0.13)); }
+.bill-top { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 6px; }
+.bill-top h3 { font-size: 1.05rem; }
+.bill-top span { font-size: 0.82rem; color: var(--muted); }
+.bill ul { list-style: none; }
+.bill li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 14px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 0.93rem; }
+.bill li em { font-style: normal; color: var(--muted); font-size: 0.82rem; grid-column: 1; }
+.bill li strong { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-weight: 600; white-space: nowrap; }
+.bill-sum { display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; }
+.bill-sum span { font-size: 0.94rem; }
+.bill-sum b { font-family: var(--display); font-size: 1.6rem; letter-spacing: -0.03em; background: linear-gradient(transparent 55%, var(--marker) 55%); padding: 0 4px; white-space: nowrap; }
+.bill-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+.bill-act { display: grid; gap: 8px; margin-top: 18px; }
+.bill-act .btn { width: 100%; padding: 14px 16px; }
+
+/* как покупают */
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; border-top: 2px solid var(--ink); }
+.steps li { counter-increment: s; padding: 24px 22px 6px 0; }
+.steps li + li { padding-left: 22px; border-left: 1px solid var(--line); }
+.steps li::before { content: counter(s); font-family: var(--display); font-weight: 700; font-size: 2.3rem; line-height: 1; display: block; margin-bottom: 16px; color: var(--green); }
+.steps h3 { font-size: 1.02rem; margin-bottom: 8px; }
+.steps p { font-size: 0.95rem; color: var(--muted); }
+
+/* готовые комплекты */
+.kits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.kit { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px; display: flex; flex-direction: column; }
+.kit svg { width: 104px; height: 64px; margin-bottom: 18px; }
+.kit h3 { font-size: 1.12rem; }
+.kit p { font-size: 0.94rem; color: var(--muted); margin-top: 8px; }
+.kit ul { list-style: none; margin: 16px 0 20px; font-size: 0.93rem; border-top: 1px solid var(--line); }
+.kit li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.kit li span:last-child { color: var(--muted); white-space: nowrap; }
+.kit-price { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.kit-price b { font-family: var(--display); font-size: 1.4rem; letter-spacing: -0.03em; }
+.kit-price button { background: none; border: 0; color: var(--green); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+
+/* каталог */
+.dark { background: var(--ink); color: #fff; }
+.dark .lede { color: #A9B4BE; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; }
+.tabs button { border: 1.5px solid rgba(255,255,255,0.22); background: transparent; color: #DDE3E8; border-radius: 999px; padding: 8px 16px; font-size: 0.93rem; }
+.tabs button:hover { border-color: #fff; }
+.tabs button[aria-pressed="true"] { background: #fff; color: var(--ink); border-color: #fff; }
+.goods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.good { background: #212C39; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.good[hidden] { display: none; }
+.thumb { height: 132px; background-color: var(--c, #45322E); background-image: var(--p); }
+.p-rib { --p: repeating-linear-gradient(90deg, rgba(0,0,0,.26) 0 3px, rgba(255,255,255,.1) 3px 6px, transparent 6px 26px); }
+.p-tile { --p: repeating-linear-gradient(0deg, rgba(0,0,0,.28) 0 2px, rgba(255,255,255,.12) 2px 5px, transparent 5px 22px), repeating-linear-gradient(90deg, rgba(0,0,0,.2) 0 2px, transparent 2px 30px); }
+.p-flex { --p: repeating-linear-gradient(0deg, rgba(0,0,0,.3) 0 2px, transparent 2px 20px), repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 2px, transparent 2px 34px), radial-gradient(rgba(255,255,255,.14) 1px, transparent 1.4px); background-size: auto, auto, 5px 5px; }
+.p-flat { --p: linear-gradient(115deg, rgba(255,255,255,.2), transparent 45%, rgba(0,0,0,.2)); }
+.p-board { --p: repeating-linear-gradient(0deg, rgba(0,0,0,.3) 0 2px, rgba(255,255,255,.14) 2px 4px, transparent 4px 34px); }
+.p-fence { --p: repeating-linear-gradient(90deg, transparent 0 8px, rgba(0,0,0,.0) 8px 30px, #212C39 30px 38px); }
+.good-in { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.good h3 { font-family: var(--text); font-weight: 600; font-size: 0.98rem; line-height: 1.3; letter-spacing: 0; }
+.good small { color: #94A1AD; font-size: 0.84rem; }
+.good-b { margin-top: auto; padding-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.good-b b { font-weight: 600; white-space: nowrap; }
+.good-b button { background: var(--marker); color: var(--ink); border: 0; border-radius: 9px; padding: 8px 13px; font-weight: 600; font-size: 0.88rem; white-space: nowrap; }
+.good-b button.in { background: #2F6F5B; color: #fff; }
+
+/* объекты */
+.works { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto auto; gap: 16px; }
+.works figure { position: relative; border-radius: 16px; overflow: hidden; background: var(--line); }
+.works figure:first-child { grid-row: 1 / span 2; }
+.works img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 9; }
+.works figure:first-child img { aspect-ratio: auto; }
+.works figcaption { position: absolute; left: 12px; bottom: 12px; right: 12px; background: rgba(23,32,43,0.82); color: #fff; font-size: 0.86rem; padding: 8px 12px; border-radius: 9px; width: fit-content; }
+.quote { margin-top: 28px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+.quote b { font-family: var(--display); font-size: 2rem; letter-spacing: -0.03em; }
+.quote p { font-size: 1.02rem; }
+.quote small { color: var(--muted); display: block; margin-top: 4px; }
+
+/* контакты */
+.contacts { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+.contacts dl { display: grid; gap: 0; border-top: 2px solid var(--ink); }
+.contacts dl div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.contacts dt { color: var(--muted); font-size: 0.92rem; }
+.contacts dd a { text-decoration: none; font-weight: 600; }
+.cta { background: var(--green); color: #fff; border-radius: 20px; padding: 32px; }
+.cta h3 { font-size: 1.35rem; }
+.cta p { margin: 12px 0 22px; color: #CFE3DB; }
+.cta .btn { background: var(--marker); color: var(--ink); }
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: 0.86rem; color: var(--muted); }
+
+/* заявка */
+dialog { border: 0; padding: 0; margin: 0 0 0 auto; height: 100dvh; max-height: none; width: min(440px, 100vw); max-width: none; background: #fff; color: var(--ink); }
+dialog::backdrop { background: rgba(23,32,43,0.5); }
+.dr { display: flex; flex-direction: column; height: 100%; }
+.dr-top { display: flex; justify-content: space-between; align-items: center; padding: 20px 22px; border-bottom: 1px solid var(--line); }
+.dr-top h3 { font-size: 1.15rem; }
+.dr-top button { border: 0; background: var(--paper); width: 38px; height: 38px; border-radius: 50%; font-size: 1.2rem; }
+.dr-list { list-style: none; flex: 1; overflow: auto; padding: 6px 22px; }
+.dr-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+.dr-list small { color: var(--muted); }
+.qty { display: inline-flex; align-items: center; gap: 4px; }
+.qty button { width: 30px; height: 30px; border-radius: 8px; border: 1.5px solid var(--line); background: #fff; }
+.qty span { min-width: 28px; text-align: center; font-weight: 600; }
+.dr-empty { padding: 40px 22px; color: var(--muted); }
+.dr-bot { padding: 18px 22px 24px; border-top: 1px solid var(--line); }
+.dr-bot .bill-sum { margin: 0 0 14px; }
+.dr-bot .btn { width: 100%; }
+
+@media (max-width: 1100px) {
+  .bench { grid-template-columns: minmax(0, 1fr) 380px; }
+  .bench .ctls { grid-column: 1; grid-row: 2; }
+  .bench .view { grid-column: 1; grid-row: 1; }
+  .bench .bill-wrap { grid-column: 2; grid-row: 1 / span 2; }
+  .goods { grid-template-columns: repeat(3, 1fr); }
+  .nav { display: none; }
+  .top-phone { margin-left: auto; }
+}
+@media (max-width: 820px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  .sec { padding: 64px 0; }
+  .hero { padding: 32px 0 48px; }
+  .bench { grid-template-columns: 1fr; margin-top: 28px; }
+  .bench .ctls, .bench .view, .bench .bill-wrap { grid-column: 1; grid-row: auto; }
+  .bench .view { order: -1; }
+  .stage { min-height: 270px; }
+  .stage-cap { display: none; }
+  .opts { grid-template-columns: 1fr; }
+  .facts { gap: 8px; }
+  .fact { padding: 12px; }
+  .fact b { font-size: 0.98rem; white-space: nowrap; }
+  .fact span { font-size: 0.78rem; line-height: 1.3; display: block; margin-top: 4px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .steps li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .steps li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .kits { grid-template-columns: 1fr; }
+  .goods { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .thumb { height: 96px; }
+  .good-b { flex-direction: column; align-items: stretch; }
+  .works { grid-template-columns: 1fr; }
+  .works figure:first-child { grid-row: auto; }
+  .works figure:first-child img { aspect-ratio: 16 / 9; }
+  .contacts { grid-template-columns: 1fr; }
+  .contacts dl div { grid-template-columns: 6.5rem minmax(0, 1fr); }
+  .top-phone { display: none; }
+  .cart-btn { margin-left: auto; }
+  .quote { grid-template-columns: 1fr; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo"><strong>Демо-версия.</strong> Цены, ассортимент и условия доставки условные — подставим ваши. Фото домов и контакты взяты из вашей карточки в 2ГИС.</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#top" aria-label="Честный дом — на главную">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0E5B45"/><path d="M6 17 16 8l10 9" fill="none" stroke="#FFD84A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 17v7h12v-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/></svg>
+      Честный дом
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#calc">Расчёт крыши</a>
+      <a href="#kits">Готовые комплекты</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#works">Наши дома</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="top-phone num" href="tel:+78432402016">+7 (843) 240-20-16</a>
+    <button class="cart-btn" type="button" id="cartOpen">Заявка <b class="num" id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="calc">
+  <div class="wrap">
+    <h1>Крыша комплектом.<br>Со&nbsp;сметой <span>до&nbsp;последнего самореза</span></h1>
+    <p class="lede">Задайте размеры дома и&nbsp;покрытие&nbsp;— справа сразу появится полный список материалов с&nbsp;ценой. Ничего не&nbsp;«всплывёт» на&nbsp;объекте: в&nbsp;смете есть и&nbsp;планки, и&nbsp;плёнка, и&nbsp;крепёж.</p>
+
+    <div class="bench">
+      <div class="panel ctls">
+        <div class="ctl">
+          <div class="ctl-name"><span>Форма крыши</span></div>
+          <div class="seg two" data-group="type">
+            <button type="button" data-v="gable" aria-pressed="true">Двускатная</button>
+            <button type="button" data-v="hip" aria-pressed="false">Вальмовая</button>
+          </div>
+        </div>
+        <div class="ctl">
+          <label class="ctl-name" for="len"><span>Длина дома</span><output class="num" id="lenOut">10 м</output></label>
+          <input type="range" id="len" min="6" max="16" step="0.5" value="10">
+        </div>
+        <div class="ctl">
+          <label class="ctl-name" for="wid"><span>Ширина дома</span><output class="num" id="widOut">8 м</output></label>
+          <input type="range" id="wid" min="5" max="12" step="0.5" value="8">
+        </div>
+        <div class="ctl">
+          <div class="ctl-name"><span>Покрытие</span></div>
+          <div class="seg" data-group="mat">
+            <button type="button" data-v="mch" aria-pressed="true">Металлочерепица <small>0,45 мм, полиэстер</small></button>
+            <button type="button" data-v="prof" aria-pressed="false">Профнастил <small>С20, 0,45 мм</small></button>
+            <button type="button" data-v="flex" aria-pressed="false">Гибкая черепица <small>битумная, однослойная</small></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="view">
+        <div class="stage">
+          <span class="stage-cap" id="stageCap">Двускатная · металлочерепица</span>
+          <svg id="house" viewBox="40 30 420 290" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Дом с выбранной крышей">
+            <defs>
+              <pattern id="brick" width="20" height="12" patternUnits="userSpaceOnUse"><path d="M0 .5H20M0 6.5H20M.5 0V6M10.5 6V12" stroke="#8A6A2C" stroke-opacity=".38" fill="none"/></pattern>
+              <pattern id="brick-s" href="#brick" xlink:href="#brick" xmlns:xlink="http://www.w3.org/1999/xlink" patternTransform="matrix(1 -0.185 0 1 250 170)"/>
+              <pattern id="mch-f" width="16" height="11" patternUnits="userSpaceOnUse"><path d="M.5 0V11" stroke="#000" stroke-opacity=".24"/><path d="M4 0V11" stroke="#fff" stroke-opacity=".1"/><path d="M0 .5H16" stroke="#000" stroke-opacity=".3"/><path d="M0 2H16" stroke="#fff" stroke-opacity=".16"/></pattern>
+              <pattern id="mch-s" href="#mch-f" xlink:href="#mch-f" xmlns:xlink="http://www.w3.org/1999/xlink" patternTransform="matrix(0.984 -0.18 0.707 0.707 170 88)"/>
+              <pattern id="prof-f" width="14" height="40" patternUnits="userSpaceOnUse"><path d="M1 0V40" stroke="#000" stroke-opacity=".3" stroke-width="2"/><path d="M4.5 0V40" stroke="#fff" stroke-opacity=".14" stroke-width="2"/></pattern>
+              <pattern id="prof-s" href="#prof-f" xlink:href="#prof-f" xmlns:xlink="http://www.w3.org/1999/xlink" patternTransform="matrix(0.984 -0.18 0.707 0.707 170 88)"/>
+              <pattern id="flex-f" width="22" height="14" patternUnits="userSpaceOnUse"><path d="M0 .5H22M0 7.5H22M.5 0V7M11.5 7V14" stroke="#000" stroke-opacity=".3" fill="none"/></pattern>
+              <pattern id="flex-s" href="#flex-f" xlink:href="#flex-f" xmlns:xlink="http://www.w3.org/1999/xlink" patternTransform="matrix(0.984 -0.18 0.707 0.707 170 88)"/>
+            </defs>
+            <rect x="-3000" y="246" width="6500" height="3000" fill="#C3CFBD"/>
+            <ellipse cx="258" cy="292" rx="196" ry="16" fill="#17202B" opacity=".13"/>
+            <!-- стены: жёлтый кирпич с тёмными углами, как на ваших домах -->
+            <polygon points="250,170 412,140 412,252 250,282" fill="#C9A45A"/>
+            <polygon points="250,170 412,140 412,252 250,282" fill="url(#brick-s)"/>
+            <polygon points="398,142.6 412,140 412,252 398,254.6" fill="#4A3327"/>
+            <polygon points="250,270 412,240 412,252 250,282" fill="#4A3327"/>
+            <g transform="matrix(1 -0.185 0 1 250 170)">
+              <rect x="34" y="34" width="34" height="44" fill="#DDE8EE" stroke="#fff" stroke-width="3"/>
+              <rect x="100" y="34" width="34" height="44" fill="#DDE8EE" stroke="#fff" stroke-width="3"/>
+            </g>
+            <rect x="92" y="170" width="158" height="112" fill="#D9B36B"/>
+            <rect x="92" y="170" width="158" height="112" fill="url(#brick)"/>
+            <rect x="92" y="170" width="13" height="112" fill="#4A3327"/><rect x="237" y="170" width="13" height="112" fill="#4A3327"/>
+            <rect x="92" y="270" width="158" height="12" fill="#4A3327"/>
+            <rect x="118" y="198" width="30" height="42" fill="#E6EFF3" stroke="#fff" stroke-width="3"/>
+            <rect x="194" y="198" width="30" height="42" fill="#E6EFF3" stroke="#fff" stroke-width="3"/>
+            <rect x="157" y="212" width="28" height="58" rx="2" fill="#3A2A22"/>
+
+            <g id="rGable">
+              <polygon points="92,172 250,172 171,94" fill="#D9B36B"/>
+              <polygon points="92,172 250,172 171,94" fill="url(#brick)"/>
+              <polygon class="roof-c" points="170,88 336,58 428,146 262,180"/>
+              <polygon class="roof-p" points="170,88 336,58 428,146 262,180" fill="url(#mch-s)"/>
+              <polyline class="roof-e" points="76,182 170,88 262,180" fill="none" stroke-width="10" stroke-linejoin="miter" stroke-linecap="square"/>
+              <path class="roof-e" d="M170 88 336 58" fill="none" stroke-width="5" stroke-linecap="round"/>
+            </g>
+            <g id="rHip" style="display:none">
+              <polygon class="roof-c" points="219,84 287,72 428,146 262,180"/>
+              <polygon class="roof-p" points="219,84 287,72 428,146 262,180" fill="url(#mch-s)"/>
+              <polygon class="roof-c" points="76,182 262,180 219,84"/>
+              <polygon class="roof-p" points="76,182 262,180 219,84" fill="url(#mch-f)"/>
+              <polygon points="76,182 262,180 219,84" fill="#000" opacity=".14"/>
+              <path class="roof-e" d="M76 182 219 84 262 180M219 84 287 72" fill="none" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+            </g>
+            <path id="gutter" d="M262 184 428 150 M424 152V250" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="facts">
+          <div class="fact"><b class="num" id="fArea">—</b><span>площадь кровли</span></div>
+          <div class="fact"><b class="num" id="fRidge">—</b><span>конёк и рёбра</span></div>
+          <div class="fact"><b class="num" id="fM2">—</b><span>за м² с комплектом</span></div>
+        </div>
+        <div class="panel opts">
+        <div class="ctl">
+          <div class="ctl-name"><span>Цвет</span><output id="colOut">RAL 8017, шоколад</output></div>
+          <div class="sw" data-group="col">
+            <button type="button" style="--c:#45322E" data-v="#45322E" data-n="RAL 8017, шоколад" aria-label="Шоколад" aria-pressed="true"></button>
+            <button type="button" style="--c:#474A51" data-v="#474A51" data-n="RAL 7024, графит" aria-label="Графит" aria-pressed="false"></button>
+            <button type="button" style="--c:#5E2129" data-v="#5E2129" data-n="RAL 3005, вишня" aria-label="Вишня" aria-pressed="false"></button>
+            <button type="button" style="--c:#2F4538" data-v="#2F4538" data-n="RAL 6005, зелёный мох" aria-label="Зелёный мох" aria-pressed="false"></button>
+            <button type="button" style="--c:#7B2A1E" data-v="#7B2A1E" data-n="RAL 3011, красный" aria-label="Красный" aria-pressed="false"></button>
+          </div>
+        </div>
+        <div class="ctl">
+          <label class="check"><input type="checkbox" id="gut" checked> Водосточная система</label>
+          <label class="check"><input type="checkbox" id="mount"> Монтаж нашей бригадой</label>
+        </div>
+        </div>
+      </div>
+
+      <div class="bill-wrap">
+        <div class="bill" aria-live="polite">
+          <div class="bill-top"><h3>Смета на комплект</h3><span>предварительная</span></div>
+          <ul id="billList"></ul>
+          <div class="bill-sum"><span>Итого за комплект</span><b class="num" id="billSum">—</b></div>
+          <p class="bill-note">Уклон в расчёте — 30°, свесы по 0,5 м. Точную смету сделаем по замеру или чертежу.</p>
+          <div class="bill-act">
+            <a class="btn btn-main" id="waCalc" href="#" target="_blank" rel="noopener">Отправить расчёт в WhatsApp</a>
+            <button class="btn btn-line" type="button" id="kitToCart">Добавить комплект в заявку</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Как проходит покупка</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Присылаете размеры</h3><p>Чертёж, фото дома или просто длину и&nbsp;ширину. Можно собрать расчёт выше и&nbsp;отправить его в&nbsp;WhatsApp.</p></li>
+      <li><h3>Получаете смету</h3><p>Полный список: листы в&nbsp;размер, планки, плёнка, крепёж, водосток. С&nbsp;количеством и&nbsp;ценой по&nbsp;каждой строке.</p></li>
+      <li><h3>Привозим на&nbsp;объект</h3><p>Весь комплект одной машиной, чтобы бригада не&nbsp;простаивала из-за забытой планки.</p></li>
+      <li><h3>Монтируем, если нужно</h3><p>Кровлю можем уложить сами: мы&nbsp;строим дома и&nbsp;делаем кровельные работы.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="kits" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Готовые комплекты</h2>
+      <p class="lede">Три типовых случая, если не&nbsp;хочется считать. Любой комплект можно открыть в&nbsp;расчёте и&nbsp;поменять размеры, покрытие и&nbsp;цвет.</p>
+    </div>
+    <div class="kits" id="kitsBox"></div>
+  </div>
+</section>
+
+<section class="sec dark" id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Каталог</h2>
+      <p class="lede">Всё для кровли, фасада и&nbsp;забора. Добавляйте позиции в&nbsp;заявку&nbsp;— посчитаем количество и&nbsp;проверим, что ничего не&nbsp;забыто.</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="goods" id="goods"></div>
+  </div>
+</section>
+
+<section class="sec" id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Дома, которые мы построили</h2>
+      <p class="lede">Мы не&nbsp;только продаём материалы, но&nbsp;и&nbsp;строим сами. Поэтому в&nbsp;комплект попадает то, что действительно понадобится на&nbsp;крыше.</p>
+    </div>
+    <div class="works">
+      <figure>
+        <picture><source srcset="assets/dom-1.webp" type="image/webp"><img src="assets/dom-1.jpg" alt="Двухэтажный дом из жёлтого кирпича с кровлей из металлочерепицы" loading="lazy" width="1200" height="675"></picture>
+        <figcaption>Двухэтажный дом, кровля из&nbsp;металлочерепицы</figcaption>
+      </figure>
+      <figure>
+        <picture><source srcset="assets/dom-2.webp" type="image/webp"><img src="assets/dom-2.jpg" alt="Одноэтажный кирпичный дом с вальмовой крышей" loading="lazy" width="1200" height="675"></picture>
+        <figcaption>Одноэтажный дом, вальмовая крыша</figcaption>
+      </figure>
+      <figure>
+        <picture><source srcset="assets/dom-3.webp" type="image/webp"><img src="assets/dom-3.jpg" alt="Двухэтажный дом из красного кирпича" loading="lazy" width="1200" height="675"></picture>
+        <figcaption>Дом из&nbsp;красного кирпича</figcaption>
+      </figure>
+    </div>
+    <div class="quote">
+      <b class="num">5,0</b>
+      <div><p>«Спасибо! Построили качественный дом!»</p><small>Вадим Матвеев, отзыв в&nbsp;2ГИС</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contacts" style="padding-top:24px">
+  <div class="wrap contacts">
+    <div>
+      <div class="sec-head"><h2>Контакты</h2></div>
+      <dl>
+        <div><dt>Адрес</dt><dd>Казань, ул. Аделя Кутуя, 153а, 2&nbsp;этаж</dd></div>
+        <div><dt>Часы работы</dt><dd>Пн–Сб, 8:00–18:00. Перед приездом позвоните</dd></div>
+        <div><dt>Телефоны</dt><dd class="num"><a href="tel:+78432402016">+7 (843) 240-20-16</a><br><a href="tel:+79662402016">+7 966 240-20-16</a></dd></div>
+        <div><dt>Оплата</dt><dd>Наличными или через банк</dd></div>
+      </dl>
+    </div>
+    <div class="cta">
+      <h3>Пришлите размеры дома&nbsp;— посчитаем комплект</h3>
+      <p>Подойдёт чертёж, фото или просто длина и&nbsp;ширина. Ответим со&nbsp;сметой.</p>
+      <a class="btn" id="waPlain" href="#" target="_blank" rel="noopener">Написать в&nbsp;WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Честный дом, Казань. Демо-версия сайта: цены и&nbsp;ассортимент условные и&nbsp;не&nbsp;являются публичной офертой.</div></footer>
+
+<dialog id="cart" aria-labelledby="cartTitle">
+  <div class="dr">
+    <div class="dr-top"><h3 id="cartTitle">Заявка</h3><button type="button" id="cartClose" aria-label="Закрыть">×</button></div>
+    <ul class="dr-list" id="cartList"></ul>
+    <div class="dr-bot">
+      <div class="bill-sum"><span>Предварительно</span><b class="num" id="cartSum">0 ₽</b></div>
+      <a class="btn btn-main" id="waCart" href="#" target="_blank" rel="noopener">Отправить заявку в WhatsApp</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var WA = '79662402016';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var rub = function (n) { return Math.round(n).toLocaleString('ru-RU') + ' ₽'; };
+  var num = function (n, d) { return n.toLocaleString('ru-RU', { maximumFractionDigits: d === undefined ? 0 : d }); };
+  var wa = function (text) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); };
+
+  /* ── условные цены демо ── */
+  var MAT = {
+    mch:  { name: 'Металлочерепица', spec: '0,45 мм, полиэстер', price: 690 },
+    prof: { name: 'Профнастил С20', spec: '0,45 мм, полиэстер', price: 570 },
+    flex: { name: 'Гибкая черепица', spec: 'с подкладочным ковром', price: 890 }
+  };
+  var P = { ridge: 390, eave: 190, verge: 240, film: 55, screws: 850, snow: 2100, gutter: 780, mount: 650 };
+  var TYPE = { gable: 'Двускатная', hip: 'Вальмовая' };
+  var st = { type: 'gable', len: 10, wid: 8, mat: 'mch', col: '#45322E', colName: 'RAL 8017, шоколад', gut: true, mount: false };
+
+  function calc(s) {
+    var o = 0.5, cos = Math.cos(Math.PI / 6), tan = Math.tan(Math.PI / 6);
+    var L = s.len + 2 * o, W = s.wid + 2 * o, half = W / 2;
+    var area = L * W / cos, ridge, eave, verge, waste;
+    if (s.type === 'gable') { ridge = L; eave = 2 * L; verge = 4 * half / cos; waste = 1.08; }
+    else {
+      var hip = Math.sqrt(2 * half * half + Math.pow(half * tan, 2));
+      ridge = Math.max(L - W, 0) + 4 * hip; eave = 2 * L + 2 * W; verge = 0; waste = 1.15;
+    }
+    var cover = Math.ceil(area * waste), m = MAT[s.mat], rows = [];
+    rows.push([m.name, m.spec, cover, 'м²', m.price]);
+    rows.push([s.type === 'hip' ? 'Конёк и рёбра' : 'Конёк', 'планка 2 м, с нахлёстом', Math.ceil(ridge * 1.05), 'п. м', P.ridge]);
+    rows.push(['Карнизная планка', 'по всем свесам', Math.ceil(eave), 'п. м', P.eave]);
+    if (verge) rows.push(['Торцевая планка', 'на фронтоны', Math.ceil(verge), 'п. м', P.verge]);
+    rows.push([s.mat === 'flex' ? 'Подкладочный ковёр' : 'Гидро-ветрозащитная плёнка', 'под покрытие', Math.ceil(area * 1.1), 'м²', P.film]);
+    if (s.mat !== 'flex') rows.push(['Кровельные саморезы', 'в цвет, упаковки по 250 шт.', Math.ceil(cover * 8 / 250), 'уп.', P.screws]);
+    rows.push(['Снегозадержатели', 'трубчатые, по 3 м', Math.ceil((s.type === 'hip' ? eave : eave) / 3), 'шт.', P.snow]);
+    if (s.gut) rows.push(['Водосточная система', 'желоба, трубы, крепёж', Math.ceil(eave), 'п. м', P.gutter]);
+    if (s.mount) rows.push(['Монтаж нашей бригадой', 'покрытие и доборные элементы', Math.ceil(area), 'м²', P.mount]);
+    var sum = rows.reduce(function (a, r) { return a + r[2] * r[4]; }, 0);
+    return { area: area, ridge: ridge, rows: rows, sum: sum };
+  }
+  function title(s) { return TYPE[s.type] + ' крыша, дом ' + num(s.len, 1) + '×' + num(s.wid, 1) + ' м, ' + MAT[s.mat].name.toLowerCase() + ', ' + s.colName; }
+
+  /* ── расчёт на первом экране ── */
+  function render() {
+    var r = calc(st);
+    $('#billList').innerHTML = r.rows.map(function (x) {
+      return '<li><span>' + x[0] + '</span><em>' + x[1] + ' · ' + num(x[2]) + ' ' + x[3] + ' × ' + num(x[4]) + ' ₽</em><strong class="num">' + rub(x[2] * x[4]) + '</strong></li>';
+    }).join('');
+    $('#billSum').textContent = rub(r.sum);
+    $('#fArea').textContent = num(r.area) + ' м²';
+    $('#fRidge').textContent = num(r.ridge) + ' п. м';
+    $('#fM2').textContent = rub(r.sum / r.area);
+    $('#lenOut').textContent = num(st.len, 1) + ' м';
+    $('#widOut').textContent = num(st.wid, 1) + ' м';
+    $('#colOut').textContent = st.colName;
+    $('#stageCap').textContent = TYPE[st.type] + ' · ' + MAT[st.mat].name.toLowerCase();
+    $('#house').style.setProperty('--roof', st.col);
+    $('#rGable').style.display = st.type === 'gable' ? '' : 'none';
+    $('#rHip').style.display = st.type === 'hip' ? '' : 'none';
+    $('#gutter').style.display = st.gut ? '' : 'none';
+    document.querySelectorAll('.roof-p').forEach(function (p) {
+      p.setAttribute('fill', 'url(#' + st.mat + (p.getAttribute('fill').slice(-3, -1) === '-f' ? '-f' : '-s') + ')');
+    });
+    document.querySelectorAll('[data-group]').forEach(function (g) {
+      var k = g.dataset.group;
+      g.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === st[k])); });
+    });
+    $('#waCalc').href = wa('Здравствуйте! Собрал расчёт на сайте.\n' + title(st) + '.\n' +
+      r.rows.map(function (x) { return '— ' + x[0] + ': ' + num(x[2]) + ' ' + x[3]; }).join('\n') +
+      '\nПредварительно: ' + rub(r.sum) + '.\nПосчитайте, пожалуйста, точно.');
+  }
+  document.querySelectorAll('[data-group]').forEach(function (g) {
+    g.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      st[g.dataset.group] = b.dataset.v;
+      if (g.dataset.group === 'col') st.colName = b.dataset.n;
+      render();
+    });
+  });
+  $('#len').addEventListener('input', function (e) { st.len = +e.target.value; render(); });
+  $('#wid').addEventListener('input', function (e) { st.wid = +e.target.value; render(); });
+  $('#gut').addEventListener('change', function (e) { st.gut = e.target.checked; render(); });
+  $('#mount').addEventListener('change', function (e) { st.mount = e.target.checked; render(); });
+
+  /* ── готовые комплекты считаются той же формулой ── */
+  var KITS = [
+    { h: 'Баня или гараж', p: 'Двускатная крыша, строение 6×5 м, профнастил.', s: { type: 'gable', len: 6, wid: 5, mat: 'prof' }, d: 'M6 44 52 12l46 32' },
+    { h: 'Дом 10×8 м', p: 'Двускатная крыша, металлочерепица. Самый частый случай.', s: { type: 'gable', len: 10, wid: 8, mat: 'mch' }, d: 'M6 46 52 8l46 38' },
+    { h: 'Дом 12×10 м', p: 'Вальмовая крыша, металлочерепица, с водостоком.', s: { type: 'hip', len: 12, wid: 10, mat: 'mch' }, d: 'M4 46 34 12h36l30 34' }
+  ];
+  $('#kitsBox').innerHTML = KITS.map(function (k, i) {
+    var s = Object.assign({}, st, k.s, { gut: true, mount: false }), r = calc(s);
+    return '<article class="kit"><svg viewBox="0 0 104 64" aria-hidden="true"><path d="' + k.d + '" fill="none" stroke="#0E5B45" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 46v12h68V46" fill="none" stroke="#17202B" stroke-width="3" stroke-linejoin="round"/></svg>' +
+      '<h3>' + k.h + '</h3><p>' + k.p + '</p><ul>' +
+      r.rows.slice(0, 4).map(function (x) { return '<li><span>' + x[0] + '</span><span class="num">' + num(x[2]) + ' ' + x[3] + '</span></li>'; }).join('') +
+      '<li><span>и ещё ' + (r.rows.length - 4) + ' поз. в смете</span><span></span></li></ul>' +
+      '<div class="kit-price"><b class="num">' + rub(r.sum) + '</b><button type="button" data-kit="' + i + '">Открыть в расчёте</button></div></article>';
+  }).join('');
+  $('#kitsBox').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-kit]'); if (!b) return;
+    Object.assign(st, KITS[+b.dataset.kit].s, { gut: true, mount: false });
+    $('#len').value = st.len; $('#wid').value = st.wid; $('#gut').checked = true; $('#mount').checked = false;
+    render(); $('#calc').scrollIntoView();
+  });
+
+  /* ── каталог ── */
+  var CATS = [['all', 'Все товары'], ['roof', 'Кровля'], ['trim', 'Доборные элементы'], ['gut', 'Водосток'], ['film', 'Плёнки'], ['safe', 'Безопасность'], ['wall', 'Фасад'], ['fence', 'Забор']];
+  var GOODS = [
+    ['g1', 'roof', 'Металлочерепица', '0,45 мм, полиэстер, лист в размер', 690, 'м²', 'p-tile', '#45322E'],
+    ['g2', 'roof', 'Профнастил С20', '0,45 мм, полиэстер, лист в размер', 570, 'м²', 'p-rib', '#474A51'],
+    ['g3', 'roof', 'Гибкая черепица', 'битумная, однослойная', 890, 'м²', 'p-flex', '#5E2129'],
+    ['g4', 'trim', 'Конёк плоский', '150×150 мм, длина 2 м', 780, 'шт.', 'p-flat', '#45322E'],
+    ['g5', 'trim', 'Карнизная планка', 'длина 2 м', 380, 'шт.', 'p-flat', '#2F4538'],
+    ['g6', 'trim', 'Ендова верхняя', 'длина 2 м', 620, 'шт.', 'p-flat', '#474A51'],
+    ['g7', 'gut', 'Желоб водосточный', 'сталь, длина 3 м', 1450, 'шт.', 'p-flat', '#E9ECEE'],
+    ['g8', 'gut', 'Труба водосточная', 'сталь, длина 3 м', 1890, 'шт.', 'p-rib', '#E9ECEE'],
+    ['g9', 'film', 'Гидро-ветрозащитная мембрана', 'рулон 70 м²', 3850, 'рулон', 'p-flat', '#8FA3B0'],
+    ['g10', 'safe', 'Снегозадержатель трубчатый', 'длина 3 м, с креплением', 2100, 'шт.', 'p-board', '#474A51'],
+    ['g11', 'wall', 'Металлосайдинг', 'корабельная доска, 0,45 мм', 774, 'м²', 'p-board', '#B9A27B'],
+    ['g12', 'fence', 'Евроштакетник', '0,45 мм, двусторонний', 119, 'п. м', 'p-fence', '#2F4538']
+  ];
+  var cart = {}, kitLine = null, cat = 'all';
+  $('#tabs').innerHTML = CATS.map(function (c) { return '<button type="button" data-cat="' + c[0] + '" aria-pressed="' + (c[0] === 'all') + '">' + c[1] + '</button>'; }).join('');
+  $('#goods').innerHTML = GOODS.map(function (g) {
+    return '<article class="good" data-cat="' + g[1] + '"><div class="thumb ' + g[6] + '" style="--c:' + g[7] + '"></div><div class="good-in"><h3>' + g[2] + '</h3><small>' + g[3] + '</small>' +
+      '<div class="good-b"><b class="num">' + num(g[4]) + ' ₽ / ' + g[5] + '</b><button type="button" data-add="' + g[0] + '">В заявку</button></div></div></article>';
+  }).join('');
+  $('#tabs').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-cat]'); if (!b) return; cat = b.dataset.cat;
+    $('#tabs').querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    $('#goods').querySelectorAll('.good').forEach(function (x) { x.hidden = cat !== 'all' && x.dataset.cat !== cat; });
+  });
+  $('#goods').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-add]'); if (!b) return;
+    cart[b.dataset.add] = (cart[b.dataset.add] || 0) + 1; drawCart();
+  });
+
+  /* ── заявка ── */
+  function drawCart() {
+    var lines = [], sum = 0, n = 0, text = [];
+    if (kitLine) { lines.push('<li><span>Комплект кровли<br><small>' + kitLine.t + '</small></span><b class="num">' + rub(kitLine.sum) + '</b><span></span><button type="button" data-rm="kit" style="border:0;background:none;color:var(--muted);text-decoration:underline">убрать</button></li>'); sum += kitLine.sum; n++; text.push('— Комплект: ' + kitLine.t + ' (' + rub(kitLine.sum) + ')'); }
+    GOODS.forEach(function (g) {
+      var q = cart[g[0]]; if (!q) return; n += q; sum += q * g[4];
+      lines.push('<li><span>' + g[2] + '<br><small>' + g[3] + '</small></span><b class="num">' + rub(q * g[4]) + '</b><span class="qty"><button type="button" data-q="-1" data-id="' + g[0] + '" aria-label="Меньше">−</button><span class="num">' + q + '</span><button type="button" data-q="1" data-id="' + g[0] + '" aria-label="Больше">+</button></span><small>' + g[5] + '</small></li>');
+      text.push('— ' + g[2] + ' (' + g[3] + '): ' + q + ' ' + g[5]);
+    });
+    $('#cartList').innerHTML = lines.length ? lines.join('') : '<li class="dr-empty" style="display:block;border:0">В заявке пока пусто. Добавьте комплект из расчёта или товары из каталога — количество уточним вместе.</li>';
+    $('#cartSum').textContent = rub(sum);
+    $('#cartCount').textContent = n;
+    $('#waCart').href = wa(lines.length ? 'Здравствуйте! Заявка с сайта:\n' + text.join('\n') + '\nПредварительно: ' + rub(sum) + '.' : 'Здравствуйте! Хочу посчитать кровлю.');
+    $('#goods').querySelectorAll('[data-add]').forEach(function (b) { var q = cart[b.dataset.add]; b.classList.toggle('in', !!q); b.textContent = q ? 'В заявке: ' + q : 'В заявку'; });
+  }
+  $('#cartList').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.rm) kitLine = null;
+    else { cart[b.dataset.id] = Math.max(0, (cart[b.dataset.id] || 0) + (+b.dataset.q)); }
+    drawCart();
+  });
+  $('#kitToCart').addEventListener('click', function () { kitLine = { t: title(st), sum: calc(st).sum }; drawCart(); $('#cart').showModal(); });
+  $('#cartOpen').addEventListener('click', function () { $('#cart').showModal(); });
+  $('#cartClose').addEventListener('click', function () { $('#cart').close(); });
+  $('#cart').addEventListener('click', function (e) { if (e.target === e.currentTarget) e.currentTarget.close(); });
+  $('#waPlain').href = wa('Здравствуйте! Хочу посчитать комплект кровли. Размеры дома: ');
+
+  render(); drawCart();
+})();
+</script>
+</body>
+</html>
